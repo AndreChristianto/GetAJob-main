@@ -1,0 +1,222 @@
+@import url("./util.css");
+
+
+/* Background */
+.bg-1{
+    background-image: linear-gradient(135deg, #ae7433, white);
+}
+
+.bg-2{
+    background-color: #f1e4d6;
+}
+
+.bg-3{
+    background-color: #484440;
+}
+
+.bg-profile{
+    background-image: url(../../assets/bg-profile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-explore{
+    background-image: url(../../assets/bg-explore.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vertical-line{
+    border-left: 1px solid white;
+    margin-left: 15px;
+}
+
+.vertical-line2{
+    border-left: 1px solid #ae7433;
+    margin-left: 15px;
+}
+
+.vertical-line3{
+    background: linear-gradient(#484440, #ae7433) no-repeat center/1px 100%;
+}
+
+.vertical-line4{
+    background: linear-gradient(#484440, #ae7433) no-repeat center/1.5px 100%;
+}
+
+.navbar{
+    background-color: transparent;
+}
+
+.rounded-20{
+    border-radius: 20px;
+}
+
+.rounded-10{
+    border-radius: 10px;
+}
+
+.text-primary{
+    color: #f1e4d6 !important;
+}
+
+.text-secondary{
+    color: #ae7433 !important;
+}
+
+.text-tertiary{
+    color: #9bc1c0 !important;
+}
+
+.text-quarternary{
+    color: #5e238c !important;
+}
+
+.text-gradient{
+    background: -webkit-linear-gradient(105deg, #ae7433, #484440);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-title{
+    font-size: 3.6rem;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ae7433;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+.category-box{
+    text-decoration: none;
+    color: black;
+    transition: 300ms ease all;
+}
+
+.category-box:hover{
+    text-decoration: none;
+    color: black;
+    transform: scale(1.03);
+}
+
+.owl-item.active.center {
+    transition: 500ms ease all;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.eye-password{
+    color:#ae7433;
+    font-size: 20px;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ae7433 !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #fff !important;
+    background-color: #ae7433 !important;
+}
+
+.btn-nav-pill{
+    color: rgb(143, 143, 143);
+    background-color: yellow;
+}
+
+.btn-nav-pill:hover{
+    color: black;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: black;
+  background-color: white;
+  border-bottom: 2px solid #ae7433;
+}
+/* Login Register */
+@keyframes left-to-right {
+    0% {
+        transform: translateX(-15%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+  
+@keyframes right-to-left {
+    0% {
+        transform: translateX(15%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.left-animation {
+    animation: 0.8s ease-in-out 0s 1 left-to-right;
+}
+  
+.right-animation {
+    animation: 0.8s ease-in-out 0s 1 right-to-left;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

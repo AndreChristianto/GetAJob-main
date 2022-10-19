@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="icon" href="../assets/icon.png">
+
+    <!-- import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/style/style.css"/>
+    <link rel="stylesheet" href="../css/style/utils.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-sm">
+          <div class="container">
+            <div class="d-inline-block">
+              <a class="navbar-brand" href="home.html">
+                  <img id="logo-id" src="../assets/logo_brown.png" alt="" width="130">
+              </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="explore-1.html">Explore</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="about.html">About</a>
+                  </li>
+                  <li class="vl vertical-line2"></li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="login.html">Sign in</a>
+                  </li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-primary rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="register.html">Register</a>
+                  </li>
+                  <li class="nav-item dropdown logged-in-features">
+                    <a class="btn btn-outline-primary nav-link-outline rounded-10 mx-2 px-3 w-100 h-100 text-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-user me-3" aria-hidden="true"></span><span  class="profile-name"></span>
+                    </a>
+                    <ul class="dropdown-menu py-2 rounded-10 mt-2" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="profile-buyer.html">Edit Profile</a></li>
+                      <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="paymentSection">
+        <div class="container py-5 mt-3">
+            <div class="row align-items-top justify-content-center pt-4">
+                <div class="col-12">
+                    <div class="card card-patterned shadow-smt-xl rounded-20 border-0">
+                        <div class= "px-5">
+                            <h2 class="fw-bold text-gradient mt-4 text-center text-uppercase">payment confirmation form</h2>
+                            <hr>
+                            <div class="card px-3 px-md-5 pb-1 pt-3 mt-3 text-start" role="alert" style="border-radius: 8px">
+                                <h4 class="py-2">Please do your payment based on the details below: </h4>
+                                <p><span class="fw-bold">Package: </span>Basic Package - Illustration</p>
+                                <p><span class="fw-bold">Price: </span> Rp. 150.000</p>
+                                <p><span class="fw-bold">Account number: </span> 5265488897</p>
+                                <p style="color: red;">*Please save/screenshot your payment proof after you finish the payment. Then please fill the form below, also upload your payment proof. You will receive a confirmation email after we confirm your payment. Thank You!</p>
+                            </div>
+                            <div class="row justify-content-center align-items-center text-start mt-5">
+                                <div class="col-12">
+                                    <div class="row px-md-2">
+                                        <div class="m-0 p-0">
+                                            <h4 class="text-start text-dark fw-bold">Payment Details</h4>
+                                        </div>
+                                        <div class="divider-green mb-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-center text-start">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12 px-2 px-md-4">
+                                            <div class=" row mb-0 mb-sm-4 mt-3 mt-sm-0">
+                                                <label class="p-0 m-0" for="payment_type">Payment Type</label>
+                                                <select class="form-select rounded-20 mt-2" name="payment_type" id="payment_type" required>
+                                                    <option selected disabled value="">Choose...</option>
+                                                    <option value="BANK">Bank</option>
+                                                    <option value="E WAL">E Wallet</option>
+                                                </select>
+                                            </div>
+                                            <div id="payment_type_div_left">
+                                                <div id="bank_container">
+                                                    <div class="row mb-0 mb-sm-4 mt-3 mt-sm-0" id="bank_name_div">
+                                                        <label class="p-0 m-0" for="bank_name">Bank Name</label>
+                                                        <select class="form-select rounded-20 mt-2 @if ($errors->any() || session('error'))is-invalid @endif" name="payment_provider_id" id="bank_name" required>
+                                                            <option selected disabled value="">Choose...</option>
+                                                            <option>BCA</option>
+                                                            <option>BNI</option>
+                                                            <option>CIMB Niaga</option>
+                                                            <option>Danamon</option>
+                                                            <option>Mandiri</option>
+                                                            <option>Mega</option>
+                                                            <option>OCBC NISP</option>
+                                                            <option>Other</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="row mb-0 mb-sm-4 mt-3 mt-sm-0" id="payment_account_name_div">
+                                                        <label class="p-0 m-0" for="payment_account_name">Bank Account Name</label>
+                                                        <input class="form-control rounded-20 mt-2" id="payment_account_name" style="display: block" type="text" name="payment_account_name" id="payment_account_name" placeholder="e.g. John Doe" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-lg-6 col-12 px-2 px-md-4" id="field_kanan">
+                                            <div class="row mb-0 mb-sm-4 mt-3 mt-sm-0" id="payment_account_number_div">
+                                                <label class="p-0 m-0" for="payment_account_number" id="payment_account_number_label">Bank Account Number</label>
+                                                <input class="form-control rounded-20 mt-2" id="payment_account_number" style="display: block" type="text" name="payment_account_number" id="payment_account_number" placeholder="e.g. 08867653763" required>   
+                                            </div>
+                                            <div class="row mb-0 mb-sm-4 mt-3 mt-sm-0" id="transfer_time_div">
+                                                <label class="p-0 m-0" for="transfer_time">Transfer Time</label>
+                                                <input class="form-control rounded-20 mt-2" id="transfer_time" style="display: block" type="text" name="transfer_time" id="transfer_time" placeholder="e.g. 13-08-2021 14:15">
+                                            </div>
+                                            <div class="row mb-0 mb-4 mt-3 mt-sm-0" id="transfer_proof_div">
+                                                <label class="p-0 m-0" for="transfer_proof" >Transfer Proof</label>
+                                                <input class="form-control rounded-20 mt-2" style="display:block" type="file" id="transfer_proof" name="transfer_proof" required>
+                                                <small class="text-muted mt-2 ps-0"> (JPG/JPEG/PNG, Max 1MB)</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary rounded-20 w-75" type="button" data-bs-target="#purchaseConfirmation" data-bs-toggle="modal" >Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <footer class="footer bg-3">
+        <div class="container py-4">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-4" style="height:150px;">
+                <div class="mt-2 mb-4">
+                  <img id="logo-id" src="../assets/logo_white.png" alt="" width="150">
+                </div>
+                <h4 class="text-white">Freelance for all your needs!</h4>
+              </div>
+              <div class="col-4" style="height:150px;">
+                <div class="row justify-content-end align-items-center">
+                  <div class="col-10">
+                    <h3 class="text-white">Contact Us</h3>
+                    <div class="px-0">
+                      <span><img src="../assets/email_white.png" alt="" width="50"><span class="ms-2 text-white">GetAJob123@gmail.com</span></span>
+                    </div>
+                    <div class="px-0">
+                      <span class="ms-2"><img src="../assets/phone_white.png" alt="" width="20"><span class="ms-4 text-white">+6287946653768</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4" style="height:150px;">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-3 text-white">
+                    <h3>Legal</h3>
+                    <h6 class="my-3">Terms</h6>
+                    <h6>Privacy</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style="background-color: white">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                <span class="mx-2"><img src="../assets/facebook_white.png" alt="" width="35"></span>
+                <span class="mx-2"><img src="../assets/twitter_white.png" alt="" width="30"></span>
+                <span class="mx-2"><img src="../assets/Instagram_white.png" alt="" width="40"></span>
+              </div>
+              <p class="text-center text-white mt-3">Copyright © 2022 GetAJob Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade show pr-0" style="z-index: 9999;" id="purchaseConfirmation" tabindex="-1" role="dialog" 
+    aria-labelledby="alertTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-20 border-0">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-12 mb-3 text-center">
+                            <i class="fa fa-exclamation-circle text-secondary" aria-hidden="true" style="font-size: 10rem;"></i>
+                        </div>
+                        <div class="col-12 my-2 text-center">
+                            <h3 class="fw-bold">Purchase Confirmation</h3>
+                            <h5 class="font-weight-normal">Are you sure want to buy this service?</h5>
+                            <button type="button" class="btn btn-outline-cancel rounded-20 my-3 px-5 mx-3"
+                            data-bs-dismiss="modal">NO</button>
+                                    <button class="btn btn-primary text-white rounded-20 my-3 px-5" onclick="modalFunction()">
+                                        YES
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade show pr-0" style="z-index: 9999;" id="successModal" tabindex="-1" role="dialog" 
+    aria-labelledby="alertTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-20 border-0">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-12 mb-3 text-center">
+                            <i class="fa fa-check text-success" aria-hidden="true" style="font-size: 10rem;"></i>
+                        </div>
+                        <div class="col-12 my-2 text-center">
+                            <h3 class="fw-bold">Purchase Success</h3>
+                            <h5 class="font-weight-normal">Your request has been processed!</h5>
+                            <a type="button" class="btn btn-outline-secondary rounded-20 my-3 px-5 mx-3" href="home.html">Close</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="form_container_temp" style="display: none">
+        <div id="ewallet_container">
+            <div class="row mb-0 mb-sm-4" id="ewallet_name_div">
+                <label class="p-0 m-0" for="ewallet_name">E Wallet Name</label>
+                <select class="form-select rounded-20 mt-2 @if ($errors->any() || session('error'))is-invalid @endif" name="payment_provider_id" id="ewallet_name" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Dana</option>
+                    <option>Gopay</option>
+                    <option>OVO</option>
+                    <option>Shopee Pay</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="row mb-0 mb-sm-4" id="payment_account_name_div">
+                <label class="p-0 m-0" for="payment_account_name">E Wallet Account Name</label>
+                <input class="form-control rounded-20 mt-2" id="payment_account_name" style="display: block" type="text" name="payment_account_name" placeholder="e.g. John Doe" id="payment_account_name" required>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- script -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/auth.js"></script>
+
+    <script>
+        function modalFunction(){
+            $("#purchaseConfirmation").modal('hide');
+            $("#successModal").modal('show');
+        }
+
+        $("#payment_type").change(function() {  
+            $("#payment_type").removeClass("is-invalid");
+            $("#invalid_payment_type").remove();
+
+            if($("#payment_type option:selected").text() == "Bank" || $("#payment_type option:selected").text() == "Choose..."){
+                $("#bank_container").appendTo($("#payment_type_div_left"));
+                $("#ewallet_container").appendTo($("#form_container_temp"));
+                $("#payment_account_number_label").text("Bank Account Number");
+            }    
+            else if($("#payment_type option:selected").text() == "E Wallet"){
+                $("#ewallet_container").appendTo($("#payment_type_div_left"));
+                $("#bank_container").appendTo($("#form_container_temp"));
+                $("#payment_account_number_label").text("E Wallet Account Number");
+            }      
+        });
+
+        $("#bank_name").change(function(){
+            $("#bank_name").removeClass("is-invalid");
+            $("#invalid_bank_name").remove();
+        });
+
+        $("#ewallet_name").change(function(){
+            $("#ewallet_name").removeClass("is-invalid");
+            $("#invalid_ewallet_name").remove();
+        });
+    </script>
+
+    
+
+</body>
+</html>

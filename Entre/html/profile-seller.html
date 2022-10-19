@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="../assets/icon.png">
+
+    <!-- import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/style/style.css"/>
+    <link rel="stylesheet" href="../css/style/utils.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-sm">
+          <div class="container">
+            <div class="d-inline-block">
+              <a class="navbar-brand" href="home.html">
+                  <img id="logo-id" src="../assets/logo_brown.png" alt="" width="130">
+              </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="explore-1.html">Explore</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="about.html">About</a>
+                  </li>
+                  <li class="vl vertical-line2"></li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="login.html">Sign in</a>
+                  </li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-primary rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="register.html">Register</a>
+                  </li>
+                  <li class="nav-item dropdown logged-in-features">
+                    <a class="btn btn-outline-primary nav-link-outline rounded-10 mx-2 px-3 w-100 h-100 text-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-user me-3" aria-hidden="true"></span><span  class="profile-name"></span>
+                    </a>
+                    <ul class="dropdown-menu py-2 rounded-10 mt-2" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="profile-buyer.html">Edit Profile</a></li>
+                      <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="profileBuyerSection" class="bg-profile m-0 px-0 py-0">
+          <div class="container-fluid pt-5 mt-2">
+            <div class="row align-items-top justify-content-center p-0">
+                <div class="col-5 mt-5" style="position: sticky; top: 200px; height: fit-content">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-10 card pt-4 pb-0">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-12 text-center ">
+                                    <img src="../assets/testi-1.png" alt="">
+                                </div>
+                                <div class="col-12 text-center pt-2 pb-4">
+                                    <h1 class="full-name-text"></h1>
+                                    <img src="../assets/rating.png" alt="" style="width: 100px;">
+                                    <span>(4.0)</span>
+                                    <div class="d-flex justify-content-center">
+                                        <hr class="w-75 text-center" style="height: 2px; background-color: #ae7433;">
+                                    </div>
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-10">
+                                            <div class="text-start px-3">
+                                                <div class="my-1">
+                                                    <i class="fa fa-map-marker me-3" aria-hidden="true"></i><span>Jakarta, Indonesia</span>
+                                                </div>
+                                                <div class="my-1">
+                                                    <i class="fa fa-calendar me-3" aria-hidden="true"></i><span>Date Joined: 20 December 2021</span>
+                                                </div>
+                                                <div class="my-1">
+                                                    <i class="fa fa-envelope me-3" aria-hidden="true"></i><span>iniemail@gmail.com</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-7" style="background-color:white;" >
+                    <div class="row align-items-center justify-content-center py-5 ps-4 pe-5">
+                        <div class="col-12 mb-2">
+                            <h2 class="fw-bold">SKILLS</h2>
+                            <hr class="w-25" style="height: 2px; background-color: #ae7433;">
+                            <div class="card p-3 rounded-10">
+                                <h6>- Drawing Skill</h6>
+                                <h6>- Adobe Animate CC</h6>
+                            </div>
+                        </div>
+                        <div class="col-12 my-2">
+                            <h2 class="fw-bold">SERVICE LIST</h2>
+                            <hr class="w-25" style="height: 2px; background-color: #ae7433;">
+                            <div class="rounded-10 card shadow-sm">
+                                <div class="row align-items-center justify-content-center py-3 px-4">
+                                    <div class="col-8">
+                                        <h4>Animasi 3D</h4>
+                                    </div>
+                                    <div class="col-4 text-end pe-4">
+                                        Target: 09 September 2022
+                                    </div>
+                                    <div class="col-6 text-start mt-2">
+                                        <h6>By: Indra Burman</h6>
+                                        <p>Price: Rp 500.000,-</p>
+                                    </div>
+                                    <div class="col-6 text-end text-warning fw-bold pe-4 mt-2">
+                                        On Going
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-end mt-2 px-1">
+                                <a href="service-list.html" class="text-secondary" style="text-decoration: none;">See More Details</a>
+                            </div>
+                        </div>
+                        <div class="col-12 py-3">
+                            <ul class="nav nav-pills nav-fill d-flex flex-wrap justify-content-between mt-2" id="myTab" role="tablist">
+                                <li class="nav-item mb-3" role="presentation">
+                                    <a class="nav-link btn-lg btn-nav-pill px-4 active" id="education_tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="true"><i class="fa fa-graduation-cap me-3" aria-hidden="true"></i>
+                                        <span style="font-size: 1.3rem;">Education</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mb-3" role="presentation">
+                                    <a class="nav-link btn-lg btn-nav-pill px-4" id="history_tab" data-bs-toggle="tab" data-bs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="true"><i class="fa fa-history me-3" aria-hidden="true"></i>
+                                        <span style="font-size: 1.3rem;">History</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mb-3" role="presentation">
+                                    <a class="nav-link btn-lg btn-nav-pill px-4" id="experience_tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab" aria-controls="experience" aria-selected="false"><i class="fa fa-trophy me-3" aria-hidden="true"></i>
+                                        <span style="font-size: 1.3rem;">Experience</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-content" id="myTabContent">
+            
+                                    <div class="tab-pane fade show active education" id="education" role="tabpanel" aria-labelledby="education_tab">
+                                        <div class="card py-3 px-4 rounded-10">
+                                            <div class="d-flex align-items-center justify-content-between pe-3 mb-2">
+                                                <div>
+                                                    <i class="fa fa-university me-3" aria-hidden="true" style="font-size: 1.25rem;"></i>
+                                                    <span class="fw-bold" style="font-size: 1.25rem;">Binus University</span>
+                                                </div>
+                                                <div>
+                                                    1995-1999
+                                                </div>
+                                            </div>
+                                            <p>Bachelor's degree, Animation</p>
+                                            <p>IPK 3.57</p>
+                                        </div>
+                                        <div class="card py-3 px-4 rounded-10 mt-4">
+                                            <div class="d-flex align-items-center justify-content-between pe-3 mb-2">
+                                                <div>
+                                                    <i class="fa fa-university me-3" aria-hidden="true" style="font-size: 1.25rem;"></i>
+                                                    <span class="fw-bold" style="font-size: 1.25rem;">SMA Negeri 5, Surabaya</span>
+                                                </div>
+                                                <div>
+                                                    1992-1995
+                                                </div>
+                                            </div>
+                                            <p>IPA</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="tab-pane fade show history" id="history" role="tabpanel" aria-labelledby="history_tab">
+                                        <div class="rounded-10 card shadow-sm mb-3">
+                                            <div class="row align-items-center justify-content-center py-3 px-4">
+                                                <div class="col-8">
+                                                    <span class="fw-bold" style="font-size: 1.25rem;">Animasi Kartun - Opening Podcast</span>
+                                                </div>
+                                                <div class="col-4 text-end pe-4">
+                                                    02 Januari 2022
+                                                </div>
+                                                <div class="col-6 text-start mt-2">
+                                                    <h6>Bought By: Axel Hudson</h6>
+                                                    <p>Price: Rp 500.000,-</p>
+                                                </div>
+                                                <div class="col-6 text-end text-success fw-bold pe-4 mt-2">
+                                                    Done
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rounded-10 card shadow-sm mb-3">
+                                            <div class="row align-items-center justify-content-center py-3 px-4">
+                                                <div class="col-8">
+                                                    <span class="fw-bold" style="font-size: 1.25rem;">Animasi Opening Tugas</span>
+                                                </div>
+                                                <div class="col-4 text-end pe-4">
+                                                    26 April 2022
+                                                </div>
+                                                <div class="col-6 text-start mt-2">
+                                                    <h6>Bought By: Duta Chandra</h6>
+                                                    <p>Price: Rp 350.000,-</p>
+                                                </div>
+                                                <div class="col-6 text-end text-success fw-bold pe-4 mt-2">
+                                                    Done
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rounded-10 card shadow-sm mb-3">
+                                            <div class="row align-items-center justify-content-center py-3 px-4">
+                                                <div class="col-8">
+                                                    <span class="fw-bold" style="font-size: 1.25rem;">Story board iklan</span>
+                                                </div>
+                                                <div class="col-4 text-end pe-4">
+                                                    09 Mei 2022
+                                                </div>
+                                                <div class="col-6 text-start mt-2">
+                                                    <h6>Bought By: Ahmad Ramadhan</h6>
+                                                    <p>Price: Rp 250.000,-</p>
+                                                </div>
+                                                <div class="col-6 text-end text-success fw-bold pe-4 mt-2">
+                                                    Done
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade show" id="experience" role="tabpanel" aria-labelledby="experience_tab" style="min-height: 45vh;">
+                                        <p style="font-size: 1.5rem;" class="text-center">Empty</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <a href="post-service.html" class="btn btn-secondary w-100 rounded-10 py-2">Post A Service</a>
+                                </div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <a href="profile-buyer.html" class="btn btn-secondary w-100 rounded-10 py-2">Buyer Profile</a>
+                                </div>
+                                <div class="col-4 d-flex justify-content-start">
+                                    <a onclick="logout()" class="btn btn-danger w-100 rounded-10 py-2">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </section>
+
+
+    <!-- script -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/auth.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            const currentUser = JSON.parse(localStorage.getItem("auth"));
+            if(currentUser.isSeller == 0){
+                $("#register-seller").show();
+                $("#seller-profile").hide();
+            } else {
+                $("#seller-profile").show();
+                $("#register-seller").hide();
+            }
+
+        });
+    </script>
+
+</body>
+</html>

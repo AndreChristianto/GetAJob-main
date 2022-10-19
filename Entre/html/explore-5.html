@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="icon" href="../assets/icon.png">
+
+    <!-- import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/style/style.css"/>
+    <link rel="stylesheet" href="../css/style/utils.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-sm">
+          <div class="container">
+            <div class="d-inline-block">
+              <a class="navbar-brand" href="home.html">
+                  <img id="logo-id" src="../assets/logo_brown.png" alt="" width="130">
+              </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="explore-1.html">Explore</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="about.html">About</a>
+                  </li>
+                  <li class="vl vertical-line2"></li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="login.html">Sign in</a>
+                  </li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-primary rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="register.html">Register</a>
+                  </li>
+                  <li class="nav-item dropdown logged-in-features">
+                    <a class="btn btn-outline-primary nav-link-outline rounded-10 mx-2 px-3 w-100 h-100 text-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-user me-3" aria-hidden="true"></span><span  class="profile-name"></span>
+                    </a>
+                    <ul class="dropdown-menu py-2 rounded-10 mt-2" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="profile-buyer.html">Edit Profile</a></li>
+                      <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="exploreSection">
+        <div class="header-explore bg-explore d-flex align-items-center justify-content-center" style="height: 40vh;">
+            <div class="row align-items-center justify-content-center h-100 w-100 pt-5 ">
+                <div class="col-5 text-center pt-5">
+                    <h1 class="text-white">Explore The Best of GetAJob's Collection</h1>
+                    <hr style="height: 2px; background-color: white; color: white;">
+                    <p class="text-white">Ethereal works done by GetAJob’s best Freelancers</p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-evenly" style="height: 10vh; background-color: #f1e4d6;">
+            <a href="explore-1.html" class="btn btn-outline-secondary rounded-20 py-2" style="min-width: 170px">GRAPHICS & DESIGN</a>
+            <a href="explore-2.html" class="btn btn-outline-secondary rounded-20 py-2" style="min-width: 170px">AUDIO & MUSIC</a>
+            <a href="explore-3.html" class="btn btn-outline-secondary rounded-20 py-2" style="min-width: 170px">VIDEO & ANIMATION</a>
+            <a href="explore-4.html" class="btn btn-outline-secondary rounded-20 py-2" style="min-width: 170px">PROGRAMMING</a>
+            <a href="explore-5.html" class="btn btn-primary rounded-20 py-2" style="min-width: 170px">BUSINESS</a>
+        </div>
+        <div class="content">
+            <div class="container py-5">
+                <div class="row align-items-top justify-content-center">
+                    <div class="col-12 text-center">
+                        <h1 class="text-secondary mb-0">BUSINESS</h1>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <hr class="w-50" style="height: 2px; background-color: #ae7433;">
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <div class="row align-items-center justify-content-start">
+                            <div class="col-4 text-center my-4">
+                                <a href="services.html?category=consult&title=consult">
+                                    <img src="../assets/explore-b-1.png" alt="" style="width: 85%;">
+                                </a>
+                                <h5 class="mt-2">CONSULT</h5>
+                            </div>
+                            <div class="col-4 text-center my-4">
+                                <a href="services.html?category=retail&title=retail">
+                                    <img src="../assets/explore-b-2.png" alt="" style="width: 85%;">
+                                </a>
+                                <h5 class="mt-2">RETAIL</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+      </section>
+
+      <footer class="footer bg-3">
+        <div class="container py-4">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-4" style="height:150px;">
+                <div class="mt-2 mb-4">
+                  <img id="logo-id" src="../assets/logo_white.png" alt="" width="150">
+                </div>
+                <h4 class="text-white">Freelance for all your needs!</h4>
+              </div>
+              <div class="col-4" style="height:150px;">
+                <div class="row justify-content-end align-items-center">
+                  <div class="col-10">
+                    <h3 class="text-white">Contact Us</h3>
+                    <div class="px-0">
+                      <span><img src="../assets/email_white.png" alt="" width="50"><span class="ms-2 text-white">GetAJob123@gmail.com</span></span>
+                    </div>
+                    <div class="px-0">
+                      <span class="ms-2"><img src="../assets/phone_white.png" alt="" width="20"><span class="ms-4 text-white">+6287946653768</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4" style="height:150px;">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-3 text-white">
+                    <h3>Legal</h3>
+                    <h6 class="my-3">Terms</h6>
+                    <h6>Privacy</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style="background-color: white">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                <span class="mx-2"><img src="../assets/facebook_white.png" alt="" width="35"></span>
+                <span class="mx-2"><img src="../assets/twitter_white.png" alt="" width="30"></span>
+                <span class="mx-2"><img src="../assets/Instagram_white.png" alt="" width="40"></span>
+              </div>
+              <p class="text-center text-white mt-3">Copyright © 2022 GetAJob Team</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- script -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>

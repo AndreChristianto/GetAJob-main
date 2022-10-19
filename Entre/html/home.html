@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetAJob</title>
+    <link rel="icon" href="../assets/icon.png">
+    <!-- import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/style/style.css" />
+    <link rel="stylesheet" href="../css/style/utils.css" />
+</head>
+<body>
+    <header>
+      <nav class="nav-change navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <div class="d-inline-block">
+            <a class="navbar-brand" href="#">
+                <img id="logo-id" src="../assets/logo_white.png" alt="" width="130">
+            </a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item mx-2">
+                <a class="btn nav-btn nav-link rounded-20 mx-2 px-3 w-100 h-100 text-white" href="explore-1.html">Explore</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="btn nav-btn nav-link rounded-20 mx-2 px-3 w-100 h-100 text-white" href="about.html">About</a>
+              </li>
+              <li class="vl vertical-line"></li>
+              <li class="nav-item mx-2 logged-out-features">
+                <a class="btn btn-outline-primary nav-link-outline rounded-20 mx-2 px-3 w-100 h-100 text-white" href="login.html">Sign in</a>
+              </li>
+              <li class="nav-item mx-2 logged-out-features">
+                <a class="btn btn-primary rounded-20 mx-2 px-3 w-100 h-100 text-white" href="register.html">Register</a>
+              </li>
+              <li class="nav-item dropdown logged-in-features">
+                <a class="btn btn-outline-primary nav-link-outline rounded-10 mx-2 px-3 w-100 h-100 text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="fa fa-user me-3" aria-hidden="true"></span><span  class="profile-name"></span>
+                </a>
+                <ul class="dropdown-menu py-2 rounded-10 mt-2" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="profile-buyer.html">Edit Profile</a></li>
+                  <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="headerSection" class="bg-1">
+      <div id="landingBackground" style="padding-top: 6rem !important;">
+        <div class="container" style="height: 70vh;">
+          <div class="row align-items-center justify-content-center h-100">
+            <div class="col-7">
+              <h1 class="fw-bold home-title text-white">Freelance Services for All Your Needs!</h1>
+              <h4 class="my-3 text-white logged-out-features" style="display: none;">Get your job done by our professional freelancer!</h4>
+              <a class="btn btn-primary rounded-10 px-3 mt-2 w-25 text-white logged-out-features" href="register.html" style="display: none;"><span class="fw-bold">Join Now</span></a>
+              <div class="input-group mt-3 w-75 logged-in-features">
+                <input type="text" class="form-control" placeholder="Search here" aria-describedby="button-addon2">
+                <button class="btn btn-primary" type="button" id="button-addon2"><span class="fa fa-search mb-1" aria-hidden="true"></span></button>
+              </div>
+            </div>
+            <div class="col-5 h-100">
+              <img src="../assets/header.png" alt="" style="height: 80vh; padding-right: 0%; margin-right: 0%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="popularSection">
+      <div class="container py-5 mt-3">
+        <div class="row align-items-center justify-content-center h-100">
+          <div class="col-12 text-center mb-2">
+            <h1>POPULAR SERVICES</h1>
+          </div>
+          <div class="w-25">
+            <hr style="height: 2px;">
+          </div>
+          <div class="col-11 mt-3">
+            <div class="popular-carousel owl-carousel owl-theme">
+
+              <div class="item">
+                <div class="card rounded-20" style="height: 400px;">
+                  <img src="../assets/explore-g&d-1.png" class="card-img-top" alt="..." style="height: 70%;">
+                  <div class="card-body">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-6 text-center">
+                        <h4 class="card-title">ILLUSTRATION</h4>
+                      </div>
+                      <div class="col-6 text-center">
+                        <a class="btn btn-primary rounded-10 px-3 mt-2 text-white" href="services.html?category=illustration&title=illustration"><span class="fw-bold">More Details</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="card rounded-20" style="height: 400px;">
+                  <img src="../assets/explore-g&d-2.png" class="card-img-top" alt="..." style="height: 70%;">
+                  <div class="card-body">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-6 text-center">
+                        <h4 class="card-title">LOGO DESIGN</h4>
+                      </div>
+                      <div class="col-6 text-center">
+                        <a class="btn btn-primary rounded-10 px-3 mt-2 text-white" href="services.html?category=logo&title=logo design"><span class="fw-bold">More Details</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="card rounded-20" style="height: 400px;">
+                  <img src="../assets/explore-a&m-3.png" class="card-img-top" alt="..." style="height: 70%;">
+                  <div class="card-body">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-6 text-center">
+                        <h4 class="card-title">INSTRUMENT</h4>
+                      </div>
+                      <div class="col-6 text-center">
+                        <a class="btn btn-primary rounded-10 px-3 mt-2 text-white" href="services.html?category=instrument&title=instrument"><span class="fw-bold">More Details</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="card rounded-20" style="height: 400px;">
+                  <img src="../assets/explore-P-2.png" class="card-img-top" alt="..." style="height: 70%;">
+                  <div class="card-body">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-6 text-center">
+                        <h4 class="card-title">WEBSITE</h4>
+                      </div>
+                      <div class="col-6 text-center">
+                        <a class="btn btn-primary rounded-10 px-3 mt-2 text-white" href="services.html?category=website&title=website"><span class="fw-bold">More Details</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="whyGetAJobSection" class="bg-2">
+      <div class="container py-5 mt-3">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12">
+            <div class="separator"><h1 class="mx-3 text-gradient">Why Get A Job</h1></div>
+          </div>
+          <div class="col-12 text-center mt-2">
+            <h5 class="text-secondary">A whole world of freelance talent at your fingertips</h5>
+          </div>
+          <div class="col-11 mt-5">
+            <div class="row">
+              <div class="col-4">
+                <div class="row">
+                  <div class="col-12 homeRectangle ">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                      <div class="text-center">
+                        <h1>24/7 Support</h1>
+                      </div>
+                      <div class="text-center mt-2" style="text-align: justify; text-justify: inter-word;">
+                        <h5>We always ready to answer all you inqueries and happy to help you all the time!</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 homeRectangle p-0">
+                    <img src="../assets/why-1.png" alt="" width="100%" height="100%">
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <div class="col-12 homeRectangle p-0">
+                    <img src="../assets/why-2.png" alt="" width="100%" height="100%">
+                  </div>
+                  <div class="col-12 homeRectangle">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                      <div class="text-center">
+                        <h1>The Best Deal</h1>
+                      </div>
+                      <div class="text-center mt-2" style="text-align: justify; text-justify: inter-word;">
+                        <h5>Find high Quality Services with the best deal!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <div class="col-12 homeRectangle">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                      <div class="text-center mt-0">
+                        <h1>Protected Payment</h1>
+                      </div>
+                      <div class="text-center mt-2" style="text-align: justify; text-justify: inter-word;">
+                        <h5>Know what you pay. Your payment isn't released until you approve the work!</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 homeRectangle p-0">
+                    <img src="../assets/why-3.png" alt="" width="100%" height="100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categorySection" >
+      <div class="container py-5 mt-3 mb-5" style="height: 60vh;">
+        <div class="row align-items-center justify-content-center h-100">
+          <div class="col-12">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-12 text-center mb-2">
+                <h1>CATEGORY</h1>
+              </div>
+              <div class="w-25">
+                <hr>
+              </div>
+              <div class="col-10">
+                <div class="row align-items-center justify-content-center">
+                  <a href="explore-1.html" class="category-box col-sm-2 mx-3 p-3 rounded-20" style="border: 2px solid black; height: 175px; width: 175px">
+                    <div class="d-flex align-items-center h-75 p-3">
+                      <img src="../assets/category-1.png" class="card-img-top mt-3" alt="...">
+                    </div>
+                    <div class="h-25">
+                      <h6 class="text-center mt-4">Graphics & Design</h6>
+                    </div>
+                  </a>
+                  <a href="explore-2.html" class="category-box col-sm-2 mx-3 p-3 rounded-20" style="border: 2px solid black; height: 175px; width: 175px">
+                    <div class="d-flex align-items-center h-75 p-3">
+                      <img src="../assets/category-2.png" class="card-img-top mt-3" alt="...">
+                    </div>
+                    <div class="h-25">
+                      <h6 class="text-center mt-4">Audio & Music</h6>
+                    </div>
+                  </a>
+                  <a href="explore-3.html" class="category-box col-sm-2 mx-3 p-3 rounded-20" style="border: 2px solid black; height: 175px; width: 175px">
+                    <div class="d-flex align-items-center h-75 p-3">
+                      <img src="../assets/category-3.png" class="card-img-top mt-3" alt="...">
+                    </div>
+                    <div class="h-25">
+                      <h6 class="text-center mt-4">Video & Animation</h6>
+                    </div>
+                  </a>
+                  <a href="explore-4.html" class="category-box col-sm-2 mx-3 p-3 rounded-20" style="border: 2px solid black; height: 175px; width: 175px">
+                    <div class="d-flex align-items-center h-75 p-3">
+                      <img src="../assets/category-4.png" class="card-img-top mt-3" alt="...">
+                    </div>
+                    <div class="h-25">
+                      <h6 class="text-center mt-4">Programming</h6>
+                    </div>
+                  </a>
+                  <a href="explore-5.html" class="category-box col-sm-2 mx-3 p-3 rounded-20" style="border: 2px solid black; height: 175px; width: 175px">
+                    <div class="d-flex align-items-center h-75 p-3">
+                      <img src="../assets/category-5.png" class="card-img-top mt-3" alt="...">
+                    </div>
+                    <div class="h-25">
+                      <h6 class="text-center mt-4">Business</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="requestSection" class="bg-2">
+      <div class="container py-5 mt-3" style="height: 75vh;">
+        <div class="row align-items-center justify-content-center h-100">
+          <div class="col-5">
+            <img src="../assets/request.png" alt="" style="width: 80%;">
+          </div>
+          <div class="col-6">
+            <h1 class="fw-bold text-secondary text-center">Can’t Find What You’re Looking For?</h1>
+            <h3 class="text-secondary text-center my-5">Write what you want, and the experts will help you!</h3>
+            <div class="text-center">
+              <a class="btn btn-primary rounded-10 px-3 mt-2 w-25 text-white text" href="request-service.html"><span class="fw-bold">Request Here</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testiSection">
+      <div class="container py-5 mt-3">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <div class="text-center w-100">
+                  <h1>Testimonies</h1>
+                  <h3>What They Think About Us!</h3>
+                </div>
+                <div>
+                  <div class="testi-carousel owl-carousel owl-theme px-5 mt-5 mb-5">
+
+                    <div class="item mt-5 mb-5">
+                      <div class="card rounded-20" style="border: 2px solid black; height: 300px;">
+                        <div class="d-flex align-items-center justify-content-center mt-3" style="height: 35%;">
+                          <img src="../assets/testi-1.png" class="card-img-top" alt="..." style="height: 100%; width:auto;">
+                        </div>
+                        <div class="card-body mt-2">
+                          <p class="text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                          </p>
+                          <p class="fw-bold text-center">Budi Gunawan</p>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="item mt-5 mb-5">
+                      <div class="card rounded-20" style="border: 2px solid black; height: 300px;">
+                        <div class="d-flex align-items-center justify-content-center mt-3" style="height: 35%;">
+                          <img src="../assets/testi-2.png" class="card-img-top" alt="..." style="height: 100%; width:auto;">
+                        </div>
+                        <div class="card-body mt-2">
+                          <p class="text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                          </p>
+                          <p class="fw-bold text-center">Veronica Sanjaya</p>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="item mt-5 mb-5">
+                      <div class="card rounded-20" style="border: 2px solid black; height: 300px;">
+                        <div class="d-flex align-items-center justify-content-center mt-3" style="height: 35%;">
+                          <img src="../assets/testi-3.png" class="card-img-top" alt="..." style="height: 100%; width:auto;">
+                        </div>
+                        <div class="card-body mt-2">
+                          <p class="text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                          </p>
+                          <p class="fw-bold text-center">Jason Michael</p>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="item mt-5 mb-5">
+                      <div class="card rounded-20" style="border: 2px solid black; height: 300px;">
+                        <div class="d-flex align-items-center justify-content-center mt-3" style="height: 35%;">
+                          <img src="../assets/testi-4.png" class="card-img-top" alt="..." style="height: 100%; width:auto;">
+                        </div>
+                        <div class="card-body mt-2">
+                          <p class="text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                          </p>
+                          <p class="fw-bold text-center">Budi Gunawan</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item mt-5 mb-5">
+                      <div class="card rounded-20" style="border: 2px solid black; height: 300px;">
+                        <div class="d-flex align-items-center justify-content-center mt-3" style="height: 35%;">
+                          <img src="../assets/testi-5.png" class="card-img-top" alt="..." style="height: 100%; width:auto;">
+                        </div>
+                        <div class="card-body mt-2">
+                          <p class="text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                          </p>
+                          <p class="fw-bold text-center">Budi Gunawan</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item mt-5 mb-5">
+                      <div class="card rounded-20" style="border: 2px solid black; height: 300px;">
+                        <div class="d-flex align-items-center justify-content-center mt-3" style="height: 35%;">
+                          <img src="../assets/testi-6.png" class="card-img-top" alt="..." style="height: 100%; width:auto;">
+                        </div>
+                        <div class="card-body mt-2">
+                          <p class="text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                          </p>
+                          <p class="fw-bold text-center">Budi Gunawan</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-3">
+      <div class="container py-4">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-4" style="height:150px;">
+              <div class="mt-2 mb-4">
+                <img id="logo-id" src="../assets/logo_white.png" alt="" width="150">
+              </div>
+              <h4 class="text-white">Freelance for all your needs!</h4>
+            </div>
+            <div class="col-4" style="height:150px;">
+              <div class="row justify-content-end align-items-center">
+                <div class="col-10">
+                  <h3 class="text-white">Contact Us</h3>
+                  <div class="px-0">
+                    <span><img src="../assets/email_white.png" alt="" width="50"><span class="ms-2 text-white">GetAJob123@gmail.com</span></span>
+                  </div>
+                  <div class="px-0">
+                    <span class="ms-2"><img src="../assets/phone_white.png" alt="" width="20"><span class="ms-4 text-white">+6287946653768</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4" style="height:150px;">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-3 text-white">
+                  <h3>Legal</h3>
+                  <h6 class="my-3">Terms</h6>
+                  <h6>Privacy</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr style="background-color: white">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-3 d-flex align-items-center justify-content-center">
+              <span class="mx-2"><img src="../assets/facebook_white.png" alt="" width="35"></span>
+              <span class="mx-2"><img src="../assets/twitter_white.png" alt="" width="30"></span>
+              <span class="mx-2"><img src="../assets/Instagram_white.png" alt="" width="40"></span>
+            </div>
+            <p class="text-center text-white mt-3">Copyright © 2022 GetAJob Team</p>
+          </div>
+      </div>
+  </footer>
+  
+
+    <!-- script -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/auth.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('.popular-carousel').owlCarousel({
+              loop:true,
+              margin:10,
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:3
+                  },
+              }
+          })
+
+          $('.testi-carousel').owlCarousel({
+              loop:true,
+              margin:100,
+              center:true,
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:3
+                  },
+              }
+          })
+
+        })
+
+        var cw = $('.homeRectangle').width();
+        $('.homeRectangle').css({'height':((cw/4) * 3)+'px'});
+    </script>
+</body>
+</html>

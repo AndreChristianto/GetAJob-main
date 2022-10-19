@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="icon" href="../assets/icon.png">
+
+    <!-- import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/style/style.css"/>
+    <link rel="stylesheet" href="../css/style/utils.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-sm">
+          <div class="container">
+            <div class="d-inline-block">
+              <a class="navbar-brand" href="home.html">
+                  <img id="logo-id" src="../assets/logo_brown.png" alt="" width="130">
+              </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="explore-1.html">Explore</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="about.html">About</a>
+                  </li>
+                  <li class="vl vertical-line2"></li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="login.html">Sign in</a>
+                  </li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-primary rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="register.html">Register</a>
+                  </li>
+                  <li class="nav-item dropdown logged-in-features">
+                    <a class="btn btn-outline-primary nav-link-outline rounded-10 mx-2 px-3 w-100 h-100 text-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-user me-3" aria-hidden="true"></span><span  class="profile-name"></span>
+                    </a>
+                    <ul class="dropdown-menu py-2 rounded-10 mt-2" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="profile-buyer.html">Edit Profile</a></li>
+                      <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="illustrationSection">
+        <div class="container py-5 mt-3">
+            <div class="row align-items-top justify-content-center pt-4">
+                <div class="col-6 text-center py-4">
+                    <img id="image-service-detail" src="../assets/illustration-1.png" alt="" style="width: 90%;">
+                </div>
+                <div class="col-1 vertical-line4" style="height: 65vh;"></div>
+                <div class="col-5 p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-pills nav-fill d-flex flex-wrap justify-content-between mt-2" id="myTab" role="tablist">
+                                <li class="nav-item mb-3" role="presentation">
+                                    <a class="nav-link btn-lg btn-nav-pill px-4 active" id="basic_tab" data-bs-toggle="tab" data-bs-target="#basic" type="button" role="tab" aria-controls="basic" aria-selected="true">
+                                        <span style="font-size: 1.3rem;">Basic</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mb-3" role="presentation">
+                                    <a class="nav-link btn-lg btn-nav-pill px-4" id="standard_tab" data-bs-toggle="tab" data-bs-target="#standard" type="button" role="tab" aria-controls="standard" aria-selected="true">
+                                        <span style="font-size: 1.3rem;">Standard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mb-3" role="presentation">
+                                    <a class="nav-link btn-lg btn-nav-pill px-4" id="premium_tab" data-bs-toggle="tab" data-bs-target="#premium" type="button" role="tab" aria-controls="premium" aria-selected="false">
+                                        <span style="font-size: 1.3rem;">Premium</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active basic" id="basic" role="tabpanel" aria-labelledby="basic_tab">
+                                    <div class="card rounded-10 shadow-sm p-4">
+                                        <div class="row">
+                                            <div class="col-12 d-flex justify-content-between pe-3">
+                                                <h5>Lorem ipsum dolor sit amet</h5>
+                                                <h5>Rp. 200.000,-</h5>
+                                            </div>
+                                            <div class="col-12 mt-1">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                            <hr class="mt-2">
+                                            <ul style="list-style:none;">
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 1</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 2</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 3</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 4</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-times me-2" aria-hidden="true" style="color: grey; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 5</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-times me-2" aria-hidden="true" style="color: grey; font-size: 1.3rem;"></i></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 6</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 text-center mt-3">
+                                            <a class="btn btn-primary rounded-20 w-100" href="payment.html">BUY</a>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="tab-pane fade show standard" id="standard" role="tabpanel" aria-labelledby="standard_tab">
+                                    <div class="card rounded-10 shadow-sm p-4">
+                                        <div class="row">
+                                            <div class="col-12 d-flex justify-content-between pe-3">
+                                                <h5>Lorem ipsum dolor sit amet</h5>
+                                                <h5>Rp. 300.000,-</h5>
+                                            </div>
+                                            <div class="col-12 mt-1">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                            <hr class="mt-2">
+                                            <ul style="list-style:none;">
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 1</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 2</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 3</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 4</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 5</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-times me-2" aria-hidden="true" style="color: grey; font-size: 1.3rem;"></i></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 6</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 text-center mt-3">
+                                            <a class="btn btn-primary rounded-20 w-100" href="payment.html">BUY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab-pane fade show " id="premium" role="tabpanel" aria-labelledby="premium_tab">
+                                    <div class="card rounded-10 shadow-sm p-4">
+                                        <div class="row">
+                                            <div class="col-12 d-flex justify-content-between pe-3">
+                                                <h5>Lorem ipsum dolor sit amet</h5>
+                                                <h5>Rp. 500.000,-</h5>
+                                            </div>
+                                            <div class="col-12 mt-1">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                            <hr class="mt-2">
+                                            <ul style="list-style:none;">
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 1</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 2</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 3</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 4</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 5</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check-square-o me-2" aria-hidden="true" style="color: green; font-size: 1.3rem;"></i>
+                                                    <span style="font-size: 1.1rem;">Benefit 6</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 text-center mt-3">
+                                            <a class="btn btn-primary rounded-20 w-100" href="payment.html">BUY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <footer class="footer bg-3">
+        <div class="container py-4">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-4" style="height:150px;">
+                <div class="mt-2 mb-4">
+                  <img id="logo-id" src="../assets/logo_white.png" alt="" width="150">
+                </div>
+                <h4 class="text-white">Freelance for all your needs!</h4>
+              </div>
+              <div class="col-4" style="height:150px;">
+                <div class="row justify-content-end align-items-center">
+                  <div class="col-10">
+                    <h3 class="text-white">Contact Us</h3>
+                    <div class="px-0">
+                      <span><img src="../assets/email_white.png" alt="" width="50"><span class="ms-2 text-white">GetAJob123@gmail.com</span></span>
+                    </div>
+                    <div class="px-0">
+                      <span class="ms-2"><img src="../assets/phone_white.png" alt="" width="20"><span class="ms-4 text-white">+6287946653768</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4" style="height:150px;">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-3 text-white">
+                    <h3>Legal</h3>
+                    <h6 class="my-3">Terms</h6>
+                    <h6>Privacy</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style="background-color: white">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                <span class="mx-2"><img src="../assets/facebook_white.png" alt="" width="35"></span>
+                <span class="mx-2"><img src="../assets/twitter_white.png" alt="" width="30"></span>
+                <span class="mx-2"><img src="../assets/Instagram_white.png" alt="" width="40"></span>
+              </div>
+              <p class="text-center text-white mt-3">Copyright © 2022 GetAJob Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade show pr-0" style="z-index: 9999;" id="purchaseConfirmation" tabindex="-1" role="dialog" 
+    aria-labelledby="alertTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-20 border-0">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-12 mb-3 text-center">
+                            <i class="fa fa-exclamation-circle text-secondary" aria-hidden="true" style="font-size: 10rem;"></i>
+                        </div>
+                        <div class="col-12 my-2 text-center">
+                            <h3 class="fw-bold">Purchase Confirmation</h3>
+                            <h5 class="font-weight-normal">Are you sure want to buy this service?</h5>
+                            <button type="button" class="btn btn-outline-cancel rounded-20 my-3 px-5 mx-3"
+                            data-bs-dismiss="modal">NO</button>
+                                    <button class="btn btn-primary text-white rounded-20 my-3 px-5" onclick="modalFunction()">
+                                        YES
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade show pr-0" style="z-index: 9999;" id="successModal" tabindex="-1" role="dialog" 
+    aria-labelledby="alertTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-20 border-0">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-12 mb-3 text-center">
+                            <i class="fa fa-check text-success" aria-hidden="true" style="font-size: 10rem;"></i>
+                        </div>
+                        <div class="col-12 my-2 text-center">
+                            <h3 class="fw-bold">Purchase Success</h3>
+                            <h5 class="font-weight-normal">Your request has been processed!</h5>
+                            <button type="button" class="btn btn-outline-secondary rounded-20 my-3 px-5 mx-3"
+                            data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- script -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/service-detail.js"></script>
+
+    <script>
+        function modalFunction(){
+            $("#purchaseConfirmation").modal('hide');
+            $("#successModal").modal('show');
+        }
+    </script>
+
+</body>
+</html>

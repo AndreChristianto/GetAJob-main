@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Seller</title>
+    <link rel="icon" href="../assets/icon.png">
+    <script src="../js/jquery.js"></script>
+
+    <!-- import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/style/style.css"/>
+    <link rel="stylesheet" href="../css/style/utils.css"/>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-sm">
+          <div class="container">
+            <div class="d-inline-block">
+              <a class="navbar-brand" href="home.html">
+                  <img id="logo-id" src="../assets/logo_brown.png" alt="" width="130">
+              </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="explore-1.html">Explore</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="about.html">About</a>
+                  </li>
+                  <li class="vl vertical-line2"></li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="login.html">Sign in</a>
+                  </li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-primary rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="register.html">Register</a>
+                  </li>
+                  <li class="nav-item dropdown logged-in-features">
+                    <a class="btn btn-outline-primary nav-link-outline rounded-10 mx-2 px-3 w-100 h-100 text-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-user me-3" aria-hidden="true"></span><span  class="profile-name"></span>
+                    </a>
+                    <ul class="dropdown-menu py-2 rounded-10 mt-2" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="profile-buyer.html">Edit Profile</a></li>
+                      <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </header>
+
+    <!-- Form -->
+    <div class="container-fluid pt-5 mt-2">
+        <!-- Title -->
+        <h1 class="text-center" style="margin-top: 3vw;">
+            REGISTER AS SELLER
+        </h1>
+        <hr style="width: 15vw; height: 0.1vw; margin-left: auto; margin-right: auto; color: black; background-color: black;">
+        <h6 class="text-center">
+            Please Fill All the Required Fields
+        </h6>
+
+        <!-- Form -->
+        <div class="card rounded-10 shadow-sm" style="margin-top: 3vw; margin-left: 10vw; margin-right: 10vw; padding: 5vw; margin-bottom: 3vw;">
+            <h4>
+                Skills
+            </h4>
+            <form action="#" methods="Post" id="add_form">
+                <div id="show_item">
+                    <div>
+                        <div>
+                            <input type="text" placeholder="Enter Skills..." class="justify-content-center align-items-center rounded-10" style="width: 65vw; margin-left: auto; margin-right: auto;">
+                        </div>
+                        <button class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary" style="margin: 1vw;">
+                            Add More
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <h4 style="margin-top: 5vw;">
+                Education
+            </h4>
+            <form action="#" methods="Post" id="add_form">
+                <div id="show_item" class="justify-content-center align-items-center">
+                    <div class="row">
+                        <div class="col">
+                            <h6>School / University</h6>
+                            <input type="text" placeholder="Enter School/University..." class="col-10">
+                        </div>
+                        <div class="col">
+                            <h6>Degree</h6>
+                            <input type="text" placeholder="Enter Degree..." class="col-10">
+                        </div>
+                        <div class="col">
+                            <h6>Year</h6>
+                            <input type="text" placeholder="Enter Year..." class="col-10">
+                        </div>
+                    </div>
+                    <div style="margin-top: 1vw;">
+                        <h6>Additional Information</h6>
+                        <input type="text" placeholder="Enter Additional Information..." style="width: 65vw;">
+                    </div>
+                    <button class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary" style="margin: 1vw;">
+                        Add More
+                    </button>
+                </div>
+            </form>
+
+            <h4 style="margin-top: 5vw;">
+                Experience
+            </h4>
+            <form action="#" methods="Post" id="add_form">
+                <div id="show_item">
+                    <div>
+                        <div>
+                            <input type="text" placeholder="Enter Experience..." class="justify-content-center align-items-center" style="width: 65vw; margin-left: auto; margin-right: auto;">
+                        </div>
+                        <button class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary" style="margin: 1vw;">
+                            Add More
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

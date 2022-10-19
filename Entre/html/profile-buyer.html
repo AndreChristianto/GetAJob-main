@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="../assets/icon.png">
+
+    <!-- import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/style/style.css"/>
+    <link rel="stylesheet" href="../css/style/utils.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-sm">
+          <div class="container">
+            <div class="d-inline-block">
+              <a class="navbar-brand" href="home.html">
+                  <img id="logo-id" src="../assets/logo_brown.png" alt="" width="130">
+              </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="explore-1.html">Explore</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="about.html">About</a>
+                  </li>
+                  <li class="vl vertical-line2"></li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="login.html">Sign in</a>
+                  </li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-primary rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="register.html">Register</a>
+                  </li>
+                  <li class="nav-item dropdown logged-in-features">
+                    <a class="btn btn-outline-primary nav-link-outline rounded-10 mx-2 px-3 w-100 h-100 text-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-user me-3" aria-hidden="true"></span><span  class="profile-name"></span>
+                    </a>
+                    <ul class="dropdown-menu py-2 rounded-10 mt-2" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="profile-buyer.html">Edit Profile</a></li>
+                      <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="profileBuyerSection" class="bg-profile m-0 p-0">
+          <div class="container-fluid pt-5 mt-2">
+            <div class="row align-items-top justify-content-center">
+                <div class="col-5 mt-5" style="position: sticky; top: 200px; height: fit-content">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-10 card py-4">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-12  text-center">
+                                    <img src="../assets/testi-1.png" alt="">
+                                </div>
+                                <div class="col-12 text-center">
+                                    <h1 class="full-name-text"></h1>
+                                    <div class="d-flex justify-content-center">
+                                        <hr class="w-75 text-center" style="height: 2px; background-color: #ae7433;">
+                                    </div>
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-10">
+                                            <div class="text-start px-3">
+                                                <div class="my-1">
+                                                    <i class="fa fa-map-marker me-3" aria-hidden="true"></i><span>Jakarta, Indonesia</span>
+                                                </div>
+                                                <div class="my-1">
+                                                    <i class="fa fa-calendar me-3" aria-hidden="true"></i><span>Date Joined: 20 December 2021</span>
+                                                </div>
+                                                <div class="my-1">
+                                                    <i class="fa fa-envelope me-3" aria-hidden="true"></i><span>iniemail@gmail.com</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-7" style="background-color:white; height: 100%;">
+                    <div class="row align-items-center justify-content-center py-5 ps-4 pe-5">
+                        <!-- <div class="col-12 mb-2">
+                            <h2 class="fw-bold">ABOUT ME</h2>
+                            <hr class="w-25" style="height: 2px; background-color: #ae7433;">
+                            <p>A very enthusiastic person in design. Looking for the
+                                best in everything that I do.</p>
+                        </div> -->
+                        <div class="col-12 py-3">
+                            <h2 class="fw-bold">TRANSACTION HISTORY</h2>
+                            <hr class="w-25" style="height: 2px; background-color: #ae7433;">
+                            <div class="rounded-10 card shadow-sm">
+                                <div class="row align-items-center justify-content-center py-3 px-4">
+                                    <div class="col-8">
+                                        <h4>Indonesian Male Voice Over</h4>
+                                    </div>
+                                    <div class="col-4 text-end pe-4">
+                                        09 June 2022
+                                    </div>
+                                    <div class="col-6 text-start mt-2">
+                                        <h6>By: Ian Albar</h6>
+                                        <p>Price: Rp 50.000,-</p>
+                                    </div>
+                                    <div class="col-6 text-end text-success fw-bold pe-4 mt-2">
+                                        Done
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-10 card shadow-sm my-3">
+                                <div class="row align-items-center justify-content-center py-3 px-4">
+                                    <div class="col-8">
+                                        <h4>NFT Artwork</h4>
+                                    </div>
+                                    <div class="col-4 text-end pe-4">
+                                        28 June 2022
+                                    </div>
+                                    <div class="col-6 text-start mt-2">
+                                        <h6>By: Ahmad Antono</h6>
+                                        <p>Price: Rp 250.000,-</p>
+                                    </div>
+                                    <div class="col-6 text-end text-warning fw-bold pe-4 mt-2">
+                                        On Going
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-10 card shadow-sm my-3">
+                                <div class="row align-items-center justify-content-center py-3 px-4">
+                                    <div class="col-8">
+                                        <h4>Best NFT Artwork</h4>
+                                    </div>
+                                    <div class="col-4 text-end pe-4">
+                                        02 July 2022
+                                    </div>
+                                    <div class="col-6 text-start mt-2">
+                                        <h6>By: Ahmad Ramadhan</h6>
+                                        <p>Price: Rp 300.000,-</p>
+                                    </div>
+                                    <div class="col-6 text-end text-warning fw-bold pe-4 mt-2">
+                                        On Going
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <a class="text-secondary" href="transaction-history.html" style="text-decoration: none;">See More Details</a>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-6 d-flex justify-content-end">
+                                    <a href="register-seller.html" class="btn btn-secondary w-75 rounded-10 py-2" id="register-seller" style="display: none;">Be A Seller</a>
+                                    <a href="profile-seller.html" class="btn btn-secondary w-75 rounded-10 py-2" id="seller-profile" style="display: none;">Seller Profile</a>
+                                </div>
+                                <div class="col-6 d-flex justify-content-start">
+                                    <a onclick="logout()" class="btn btn-danger w-75 rounded-10 py-2">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </section>
+
+
+    <!-- script -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/auth.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            
+            const currentUser = JSON.parse(localStorage.getItem("auth"));
+            if(currentUser.isSeller == 0){
+                $("#register-seller").show();
+                $("#seller-profile").hide();
+            } else {
+                $("#seller-profile").show();
+                $("#register-seller").hide();
+            }
+
+        });
+    </script>
+
+</body>
+</html>

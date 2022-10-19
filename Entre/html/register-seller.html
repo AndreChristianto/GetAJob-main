@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Seller</title>
+    <link rel="icon" href="../assets/icon.png">
+    <script src="../js/jquery.js"></script>
+
+    <!-- import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../css/owl-carousel/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/style/style.css"/>
+    <link rel="stylesheet" href="../css/style/utils.css"/>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-sm">
+          <div class="container">
+            <div class="d-inline-block">
+              <a class="navbar-brand" href="home.html">
+                  <img id="logo-id" src="../assets/logo_brown.png" alt="" width="130">
+              </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="explore-1.html">Explore</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="btn nav-btn-secondary nav-link rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="about.html">About</a>
+                  </li>
+                  <li class="vl vertical-line2"></li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="login.html">Sign in</a>
+                  </li>
+                  <li class="nav-item mx-2 logged-out-features">
+                    <a class="btn btn-primary rounded-20 mx-2 px-3 w-100 h-100 text-secondary" href="register.html">Register</a>
+                  </li>
+                  <li class="nav-item dropdown logged-in-features">
+                    <a class="btn btn-outline-primary nav-link-outline rounded-10 mx-2 px-3 w-100 h-100 text-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-user me-3" aria-hidden="true"></span><span  class="profile-name"></span>
+                    </a>
+                    <ul class="dropdown-menu py-2 rounded-10 mt-2" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="profile-buyer.html">Edit Profile</a></li>
+                      <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+    </header>
+
+    <section id="registerSeller">
+        <div class="container py-5 mt-3">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 text-center">
+                    <h1 class="text-center mt-5 mb-4">
+                        REGISTER AS SELLER
+                    </h1>
+                </div>
+                <div class="col-12 card shadow-sm rounded-10 p-5">
+                    <div class="row align-items-center justify-content-center">
+                        <form action="#" methods="Post" id="add_form"></form>
+                        <h4 class="text-center">
+                            Please Fill All the Required Fields
+                        </h4>
+                        <div class="d-flex justify-content-center">
+                            <hr class="w-25">
+                        </div>
+                            <div class="col-12 my-2">
+                                <div id="skill-div">
+                                    <h5>Skills</h5>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><h6>Skill Name</h6></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g Photography">
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <button id="skill-remove-btn" class="btn btn-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary" style="display: none;">
+                                        Remove Skill
+                                    </button>
+                                    <button id="skill-add-btn" class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary">
+                                        Add More
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 my-2">
+                                <div id="edu-div" class="row align-items-center justify-content-center">
+                                    <h5>Education</h5>
+                                    <div class="mb-3 col-4">
+                                        <label for="exampleFormControlInput1" class="form-label"><h6>School/University</h6></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g Universitas Bina Nusantara">
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <label for="exampleFormControlInput1" class="form-label"><h6>Degree</h6></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g Strata 1">
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <label for="exampleFormControlInput1" class="form-label"><h6>Year</h6></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g 2010-2014">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><h6>Additional Information</h6></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <button id="edu-remove-btn" class="btn btn-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary" style="display: none;">
+                                        Remove Education
+                                    </button>
+                                    <button id="edu-add-btn" class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary">
+                                        Add More
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 my-2">
+                                <h5>Experience</h5>
+                                <div id="exp-div">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><h6>Title</h6></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g Photography">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><h6>Certificate/proof</h6></label>
+                                        <input class="form-control" type="file" id="formFile"  accept="image/JPG, image/JPEG, image/PNG, application/PDF">
+                                        <small>(PDF, JPG, JPEG, PNG) Max. 2mb</small>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <button id="exp-remove-btn" class="btn btn-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary" style="display: none;">
+                                        Remove Experience
+                                    </button>
+                                    <button id="exp-add-btn" class="btn btn-outline-secondary nav-link-outline rounded-20 mx-2 px-3 text-secondary" style="margin: 1vw;">
+                                        Add More
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button class="btn btn-primary w-100 rounded-20" onclick="registerSeller()">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/auth.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var skillId = 1;
+            var eduId = 1;
+            var expId = 1;
+
+            $("#skill-add-btn").click(function(){
+                skillId++;
+                var ordinal = getNumber(skillId);
+
+                $('#skill-remove-btn').show()
+                $('#skill-div').append('<div class="mb-3 mt-2" id="skill-content-' + skillId +'" ><label for="exampleFormControlInput1" class="form-label"><h6>' + skillId + ordinal +' skill name</h6></label><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g Photography"></div>');   
+            });
+
+            $('#skill-remove-btn').click(function(){
+                $('#skill-content-' +skillId).remove();
+                skillId--;
+                if(skillId == 1){
+                    $('#skill-remove-btn').hide()
+                }
+            });
+
+            $("#edu-add-btn").click(function(){
+                eduId++;
+                var ordinal = getNumber(eduId);
+                $('#edu-remove-btn').show()
+                $('#edu-div').append('<div class="mb-3 mt-3 col-4 edu-content-' + eduId +'"><label for="exampleFormControlInput1" class="form-label"><h6>' + eduId + ordinal +' School/University</h6></label><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g Universitas Bina Nusantara"></div>');
+                $('#edu-div').append('<div class="mb-3 mt-3 col-4 edu-content-' + eduId +'"><label for="exampleFormControlInput1" class="form-label"><h6>Degree</h6></label><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g Strata 1"></div>');      
+                $('#edu-div').append('<div class="mb-3 mt-3 col-4 edu-content-' + eduId +'"><label for="exampleFormControlInput1" class="form-label"><h6>Year</h6></label><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g 2010-2014"></div>');   
+                $('#edu-div').append('<div class="mb-3 mt-3 edu-content-' + eduId +'"><label for="exampleFormControlInput1" class="form-label"><h6>Additional Information</h6></label><input type="email" class="form-control" id="exampleFormControlInput1"></div>');
+            });
+
+            $('#edu-remove-btn').click(function(){
+                $('.edu-content-' +eduId).remove();
+                eduId--;
+                if(eduId == 1){
+                    $('#edu-remove-btn').hide()
+                }
+            });
+
+            $("#exp-add-btn").click(function(){
+                expId++;
+                var ordinal = getNumber(expId);
+                $('#exp-remove-btn').show()
+                $('#exp-div').append('<div class="mb-3 mt-3 exp-content-' + expId +'"><label for="exampleFormControlInput1" class="form-label"><h6>' + expId + ordinal +' Title</h6></label><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g Photography"></div>');
+                $('#exp-div').append('<div class="mb-3 exp-content-' + expId +'"><label for="exampleFormControlInput1" class="form-label"><h6>Certificate/proof</h6></label><input class="form-control" type="file" id="formFile"  accept="image/JPG, image/JPEG, image/PNG, application/PDF"><small>(PDF, JPG, JPEG, PNG) Max. 2mb</small></div>');
+            });
+            $('#exp-remove-btn').click(function(){
+                $('.exp-content-' +expId).remove();
+                expId--;
+                if(expId == 1){
+                    $('#exp-remove-btn').hide()
+                }
+            });
+
+
+            function getNumber(temp){
+
+                if(temp == 11 || temp == 12 || temp == 13){
+                    return "th"
+                } 
+
+                while(temp > 10){
+                    temp%=10;
+                }
+
+                if(temp == 1){
+                    return "st"
+                } else if(temp == 2){
+                    return "nd"
+                } else if(temp == 3){
+                    return "rd"
+                } else {
+                    return "th"
+                }
+            }
+            
+        });
+
+        function registerSeller(){
+            updateIsSeller();
+        }
+
+        
+    </script>
+</body>
+</html>
